@@ -4,6 +4,8 @@ An experiment in artificial life, artificial neural nets, artificial sentience, 
 ## Requirements
 
 A linux, mac, or unix equivalent command line and the 'sh' shell.
+- Opening a Terminal on Mac: https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac
+- Open Terminal on Linux: Ctrl+Alt+T (for some versions of Linux)
 
 A graphical user interface to display UI. If you are seeing this from a graphical web browser then you are all set.
 
