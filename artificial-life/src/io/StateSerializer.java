@@ -147,7 +147,8 @@ public class StateSerializer {
 		
 		try {
 			FileDialog fileDialog = new FileDialog(frame, "Choose Save Location", FileDialog.SAVE);
-			fileDialog.setDirectory(new File(".").getCanonicalPath());
+			(new File("./saves")).mkdirs();
+			fileDialog.setDirectory(new File("./saves").getCanonicalPath());
 			long dateTime = (new Date()).getTime();
 			fileDialog.setFile("botbrains." + dateTime + ".bot");
 			fileDialog.setVisible(true);
@@ -183,7 +184,8 @@ public class StateSerializer {
 
 		try {
 			FileDialog fileDialog = new FileDialog(frame, "Choose State File", FileDialog.LOAD);
-			fileDialog.setDirectory(new File(".").getCanonicalPath());
+			(new File("./saves")).mkdirs();
+			fileDialog.setDirectory(new File("./saves").getCanonicalPath());
 			fileDialog.setFile("*.bot");
 			fileDialog.setVisible(true);
 

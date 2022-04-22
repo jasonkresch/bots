@@ -711,7 +711,7 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 		refreshTimeRow.add(refreshTimeLabel);
 
 		// Num Green Balls Slider
-		refreshTimeSlider = new JSlider(5, 120, 15 /* default */);
+		refreshTimeSlider = new JSlider(5, 120, 5 /* default */);
 		refreshTimeSlider.setPaintTrack(true);
 		refreshTimeSlider.setPaintTicks(true);
 		refreshTimeSlider.setPaintLabels(false);
@@ -721,7 +721,7 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 		refreshTimeRow.add(refreshTimeSlider);
 
 		// Num Green Balls Value
-		refreshTimeValue = new JLabel("15 seconds");
+		refreshTimeValue = new JLabel("5 seconds");
 		refreshTimeValue.setFont(new Font("Mono", Font.BOLD, 16));
 		refreshTimeRow.add(refreshTimeValue);
 
@@ -795,7 +795,8 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 
 							if (ControlWindow.this.autoSaveOn.isSelected()
 									&& ((currentGeneration % AUTOSAVE_FREQUENCY) == 0)) {
-								File autosavePath = new File("autosave.bot");
+								(new File("./saves")).mkdirs();
+								File autosavePath = new File("saves/autosave.bot");
 								StateSerializer.saveState(autosavePath, ControlWindow.this.botLife);
 							}
 
@@ -833,23 +834,22 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 		if (actionEvent.getSource() == this.startStopTraining) {
 			if (this.running.compareAndSet(false, true)) {
 				this.startStopTraining.setText("Pause Training");
-				
-				if (this.showBotsButton.isEnabled() == false)
-				{
+
+				if (this.showBotsButton.isEnabled() == false) {
 					if (this.config.isStarted() == false) {
 						// This is the first time started ever, last chance to reset bot brains
 						this.botLife.resetBots();
 					}
-					
+
 					// This window is hidden and inactive by default
 					ControlWindow.this.display = new AnimationDisplay(ControlWindow.this, ControlWindow.this.config);
 					this.showBotsButton.setEnabled(true);
-					
+
 					this.config.setStarted(true);
 					this.generationSizeSlider.setEnabled(false);
 					this.brainSizeSlider.setEnabled(false);
 				}
-				
+
 				synchronized (lock) {
 					this.lock.notifyAll();
 				}
@@ -861,14 +861,18 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 
 		// Button Clicked
 		if (actionEvent.getSource() == this.loadTrainingState) {
-			this.botLife = StateSerializer.loadState(this.frame);
-			
-			// Load configuration settings
-			this.processedConfigForUI(this.botLife.getConfig());
-			updated();
-			this.config = this.botLife.getConfig();
-			
-			ControlWindow.this.generationNumberLabel.setText("Generation #" + this.botLife.getGenerationNumber());
+			final BotLife loadedBotLife = StateSerializer.loadState(this.frame);
+
+			if (loadedBotLife != null) {
+				this.botLife = loadedBotLife;
+
+				// Load configuration settings
+				this.processedConfigForUI(this.botLife.getConfig());
+				updated();
+				this.config = this.botLife.getConfig();
+
+				ControlWindow.this.generationNumberLabel.setText("Generation #" + this.botLife.getGenerationNumber());
+			}
 		}
 
 		// Button Clicked
@@ -1018,7 +1022,7 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 		this.fieldOfViewSlider.setValue((int) config.getScanDegrees());
 		this.antennaLengthSlider.setValue((int) (config.getAntennaLength() * 100));
 		this.numGreenBallsSlider.setValue(config.getNumGreenBalls());
-		this.numRedBallsSlider.setValue( config.getNumRedBalls());
+		this.numRedBallsSlider.setValue(config.getNumRedBalls());
 		this.ballResetsSlider.setValue(config.getBallResetsPerGeneration());
 		this.greenBenefitSlider.setValue(config.getGreenBallBenefit());
 		this.redDetrimentSlider.setValue(config.getRedBallDetriment());
@@ -1027,7 +1031,7 @@ public class ControlWindow implements ActionListener, ChangeListener, DocumentLi
 		this.botsToShowSlider.setValue(config.getDisplayBots());
 		this.fpsSlider.setValue(config.getFramesPerSecond());
 		this.refreshTimeSlider.setValue(config.getTimeBetweenUpdates());
-		
+
 		if (config.isStarted()) {
 			// These parameters are locked once evolution starts
 			this.generationSizeSlider.setEnabled(false);

@@ -76,7 +76,7 @@ public class Configuration implements Serializable, Cloneable {
 	private int displayRedBalls = 3;
 
 	// How many time steps to show before updating with new bots and balls, etc.
-	private int timeBetweenUpdates = 15;
+	private int timeBetweenUpdates = 5;
 
 	// How many frames per second to show in display view
 	private int framesPerSecond = 100;
