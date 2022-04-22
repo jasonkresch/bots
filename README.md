@@ -15,30 +15,31 @@ git is recommended but not required. If you do not have git installed but would 
 
 If you have git installed, then from the terminal run the following command:
   
-  $ git clone https://github.com/jasonkresch/bots.git
+  `$ git clone "https://github.com/jasonkresch/bots.git"`
 
 If you do not have git installed:
 
 Download the following project zip by clicking the following link from your web browser, or running the following command from your terminal:
 
-  $ wget https://github.com/jasonkresch/bots/archive/refs/heads/main.zip
+  `$ wget "https://github.com/jasonkresch/bots/archive/refs/heads/main.zip"`
 
 Extract the ZIP file and rename the extracted folder to 'bots' for consistency with the rest of the instructions.
 
-  $ unzip main.zip
+  `$ unzip main.zip`
   
 After extracting, it will create a folder 'bots-main' which is different from the folder created using git. For consistency with the rest of the instructions below it is best to rename this folder to 'bots' as follows:
   
-  $ mv bots-main bots
+  `$ mv "bots-main" "bots"`
 
 
 ## Compilation Instructions
 
 After downloading the project, run the following commands from your command line:
 
-  $ cd bots/artificial-life/
-  
-  $ ./build.sh
+```
+$ cd "bots/artificial-life/"
+$ ./build.sh
+```
 
 Note that the java compiler (javac) is required to be on your system. If you do not have it, download and install the appopriate Java Development Kit (JDK) for your system. See: https://openjdk.java.net/install/ for more information if you get 'javac: command not found' or any similar error message from running the build command.
 
@@ -46,7 +47,7 @@ Note that the java compiler (javac) is required to be on your system. If you do 
 
 To start the program run the following command from the 'bots/artificial-life/ directory:
 
-$ ./run.sh
+`$ ./run.sh`
 
 This will bring up the main control window user interface. This interface will allow you to set various parameters of the artificial life simulation.
 
