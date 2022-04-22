@@ -15,9 +15,15 @@ git is recommended but not required. If you do not have git installed but would 
 
 ## Download Instructions
 
+### Downloading with git
+
 If you have git installed, then from the terminal run the following command:
   
   `git clone "https://github.com/jasonkresch/bots.git"`
+  
+If you download with git, you can now skip below to the compilation instructions.
+
+### Downloading without git
 
 If you do not have git installed:
 
