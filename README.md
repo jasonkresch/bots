@@ -37,6 +37,7 @@ After extracting, it will create a folder 'bots-main' which is different from th
 After downloading the project, run the following commands from your command line:
 
   $ cd bots/artificial-life/
+  
   $ ./build.sh
 
 Note that the java compiler (javac) is required to be on your system. If you do not have it, download and install the appopriate Java Development Kit (JDK) for your system. See: https://openjdk.java.net/install/ for more information if you get 'javac: command not found' or any similar error message from running the build command.
