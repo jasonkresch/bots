@@ -4,14 +4,14 @@ An experiment in artificial life, artificial neural nets, artificial sentience, 
 ## Requirements
 
 A linux, mac, or unix equivalent command line and the 'sh' shell.
-- Opening a Terminal on Mac: https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac
-- Open Terminal on Linux: Ctrl+Alt+T (for some versions of Linux)
+- If you are on a Mac, and don't know how to access the terminal, see [Opening a Terminal on a Mac](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac).
+- I you are on Linux, you can usually open Terminal by pressing: Ctrl+Alt+T
 
 A graphical user interface to display UI. If you are seeing this from a graphical web browser then you are all set.
 
-You must have the Java Development Kit ( https://openjdk.java.net/install/ ) to compile the software.
+You must have the [Java Development Kit](https://openjdk.java.net/install/) to compile the software.
 
-git is recommended but not required. If you do not have git installed but would like to install it see: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+git is recommended but not required. If you do not have git installed but would like to install it, [click here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 ## Download Instructions
 
@@ -21,7 +21,7 @@ If you have git installed, then from the terminal run the following command:
 
 If you do not have git installed:
 
-Download the following project zip by clicking the following link from your web browser, or running the following command from your terminal:
+Download the following project zip by [clicking here](https://github.com/jasonkresch/bots/archive/refs/heads/main.zip) or by running the following command from your terminal:
 
   `$ wget "https://github.com/jasonkresch/bots/archive/refs/heads/main.zip"`
 
