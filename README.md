@@ -1,6 +1,8 @@
 # bots
 An experiment in artificial life, artificial neural nets, artificial sentience, simulated evolution, simulated consciousness, and genetic programming
 
+![Bot Arena](https://i.postimg.cc/wx026WX9/bot-arena.png)
+
 ## Requirements
 
 A linux, mac, or unix equivalent command line and the 'sh' shell.
@@ -62,6 +64,8 @@ This will bring up the main control window user interface. This interface will a
 Once you have chosen the parameters and are ready to begin, click 'Start Training'. This will begin the process of evolving ever more capable bots. After training has started, you may, at any time click the 'Show Bot Arena' button to keep an eye on how the bots are performing in the latest generation.
 
 When the "Enable Autosave" option is checked, the progress will be saved to "autosave.bot" in the "saves" directory every 10 generations. To continue where you left off, click the "Load State" button. To prevent your settings from being overwritten by an autosave, click the "Save State" button to save the progress to a location and file name of your choice.
+
+![Bot Configuration](https://i.postimg.cc/V6z9wM5S/bot-configuration.png)
 
 *Not that once the training is started, Generation Size and Bot Brain Size can no longer be adjusted.* Please choose these carefully before starting a new evolution experiment! See the section below for more information about the meaning of each of these settings.
 
