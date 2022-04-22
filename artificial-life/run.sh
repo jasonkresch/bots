@@ -1,2 +1,2 @@
 #!/bin/sh
-java -cp artificial-life/bin ui.ControlWindow
+java -cp bin ui.ControlWindow
