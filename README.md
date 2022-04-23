@@ -6,7 +6,7 @@ An experiment in artificial life, artificial neural nets, artificial sentience, 
 **Watch videos:**
 - [Learning to Eat](https://www.youtube.com/watch?v=InBsqlWQTts&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=1)
 - [Adapting to a Changing Environment](https://www.youtube.com/watch?v=0hhYBqmikWI&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=2)
-- [Hard Times](https://www.youtube.com/watch?v=InBsqlWQTts&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=3)
+- [Hard Times](https://www.youtube.com/watch?v=_5sl3lBQ96E&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=3)
 
 ## Requirements
 
