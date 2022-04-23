@@ -10,15 +10,12 @@ An experiment in artificial life, artificial neural nets, artificial sentience, 
 
 ## Requirements
 
-A linux, mac, or unix equivalent command line and the 'sh' shell.
-- If you are on a Mac, and don't know how to access the terminal, see [Opening a Terminal on a Mac](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac).
-- I you are on Linux, you can usually open a terminal by pressing: Ctrl+Alt+T
+A Linux or Unix-equivalent command line shell (/bin/sh), or the Windows command prompt (cmd.exe), or the MacOS Terminal.
+- If you are on a MacOS, you can access the terminal by pressing: 'Option+Command+Space' and typing 'Terminal'
+- If you are on Windows you can open the command prompt by pressing: 'Windows Button+R', then enter 'cmd.exe'
+- If you are on Linux, you can usually open a terminal by pressing: 'Ctrl+Alt+T'
 
-A graphical user interface to display UI. If you are seeing this from a graphical web browser then you are all set.
-
-You must have the [Java Development Kit](https://openjdk.java.net/install/) to compile the software.
-
-git is recommended but not required. If you do not have git installed but would like to install it, [click here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). You can skip this step if you are not interested in modifying the software.
+You must have the [Java Development Kit](https://openjdk.java.net/install/) installed in order to compile the software.
 
 ## Download Instructions
 
@@ -32,11 +29,11 @@ If you download with git, you can now skip below to the compilation instructions
 
 ### Downloading without git
 
-If you do not have git installed:
-
-Download the this project's zip file by running the following command from your terminal:
+If you do not have git installed, download the project's zip file by running the following command from your terminal:
 
   `wget "https://github.com/jasonkresch/bots/archive/refs/heads/main.zip"`
+  
+*If you are on Windows or if the 'wget' command fails*, you can instead download the project ZIP file by [clicking here](https://github.com/jasonkresch/bots/archive/refs/heads/main.zip). If you download this file directly, you must extract it and then us the 'cd' command to change the directory to the location of the extracted files.
 
 From the terminal, go to the location where the ZIP was downloaded, and extract the ZIP file contents using the following command:
 
@@ -49,20 +46,31 @@ After extracting, it will create a folder 'bots-main' which is different from th
 
 ## Compilation Instructions
 
-After downloading the project, run the following commands from your command line:
+After downloading the project, run the following commands from your command line if you are not on Windows:
 
 ```
 cd "bots/artificial-life/"
 ./build.sh
 ```
 
-Note that the java compiler (javac) is required to be on your system. If you do not have it, download and install the appopriate Java Development Kit (JDK) for your system. See: https://openjdk.java.net/install/ for more information if you get 'javac: command not found' or any similar error message from running the build command.
+If you are on Windows, then run the following commands:
+
+```
+cd "bots/artificial-life/"
+build.bat
+```
+
+Note that the java compiler (javac) is required to build the software. If you do not have it, download and install the appopriate Java Development Kit (JDK) for your system. See: https://openjdk.java.net/install/ for more information should you get 'javac: command not found' or any similar error message after attempting to execute the build command.
 
 ## Running Instructions
 
 To start the program run the following command from the 'bots/artificial-life/ directory:
 
 `./run.sh`
+
+or if you are on Windows:
+
+`run.bat`
 
 This will bring up the main control window user interface. This interface will allow you to set various parameters of the artificial life simulation.
 
