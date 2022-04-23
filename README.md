@@ -3,6 +3,11 @@ An experiment in artificial life, artificial neural nets, artificial sentience, 
 
 ![Bot Arena](https://i.postimg.cc/wx026WX9/bot-arena.png)
 
+**Watch videos:**
+- [Learning to Eat](https://www.youtube.com/watch?v=InBsqlWQTts&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=1)
+- [Adapting to a Changing Environment](https://www.youtube.com/watch?v=0hhYBqmikWI&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=2)
+- [Hard Times](https://www.youtube.com/watch?v=InBsqlWQTts&list=PLq_mdJjNRPT11IF4NFyLcIWJ1C0Z3hTAX&index=3)
+
 ## Requirements
 
 A linux, mac, or unix equivalent command line and the 'sh' shell.
