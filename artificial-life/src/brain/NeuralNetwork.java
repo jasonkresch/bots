@@ -120,7 +120,7 @@ public class NeuralNetwork {
 	// Implements activation above 0
 	public static double rectifiedLinearUnit(double input) {
 		if (input < 0) {
-			return input * 0.025;
+			return 0;
 		} else {
 			return input;
 		}
