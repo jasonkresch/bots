@@ -10,12 +10,12 @@ An experiment in artificial life, artificial neural nets, artificial sentience, 
 
 ## Requirements
 
-A Linux or Unix-equivalent command line shell (/bin/sh), or the Windows command prompt (cmd.exe), or the MacOS Terminal.
-- If you are on a MacOS, you can access the terminal by pressing: 'Option+Command+Space' and typing 'Terminal'
-- If you are on Windows you can open the command prompt by pressing: 'Windows Button+R', then enter 'cmd.exe'
+A Linux or Unix-equivalent command line shell (/bin/sh), the Windows command prompt (cmd.exe), or the MacOS Terminal.
+- If you are on MacOS, you can access the terminal by pressing 'Option+Command+Space' and entering 'Terminal'
+- If you are on Windows you can open the command prompt by pressing: 'Windows Button+R', and entering 'cmd.exe'
 - If you are on Linux, you can usually open a terminal by pressing: 'Ctrl+Alt+T'
 
-You must have the [Java Development Kit](https://openjdk.java.net/install/) installed in order to compile the software.
+You must have the [Java Development Kit](https://openjdk.java.net/install/) installed in order to compile and run the software.
 
 ## Download Instructions
 
@@ -25,23 +25,29 @@ If you have git installed, then from the terminal run the following command:
   
   `git clone "https://github.com/jasonkresch/bots.git"`
   
-If you download with git, you can now skip below to the compilation instructions.
+If you download with git, you can skip to the compilation instructions below.
 
 ### Downloading without git
 
-If you do not have git installed, download the project's zip file by running the following command from your terminal:
+If you do not have git or do not know what it is, you can download the project's zip file by running the following command from your terminal if you are using Linux or MacOS:
 
   `wget "https://github.com/jasonkresch/bots/archive/refs/heads/main.zip"`
   
-*If you are on Windows or if the 'wget' command fails*, you can instead download the project ZIP file by [clicking here](https://github.com/jasonkresch/bots/archive/refs/heads/main.zip). If you download this file directly, you must extract it and then us the 'cd' command to change the directory to the location of the extracted files.
+*If you are on Windows or if the 'wget' command fails*, you can download the project ZIP file by [clicking here](https://github.com/jasonkresch/bots/archive/refs/heads/main.zip). If you download this file directly, you must extract it and then use the 'cd' command to change the directory to the location of the extracted files.
 
-From the terminal, go to the location where the ZIP was downloaded, and extract the ZIP file contents using the following command:
+If you downloaded with 'wget'. then extract the ZIP file contents using the following command:
 
   `unzip main.zip`
   
-After extracting, it will create a folder 'bots-main' which is different from the folder created using git. For consistency with the rest of the instructions below, rename this folder to 'bots' by entering the following command into the terminal:
+After extracting, it a folder 'bots-main' is created. Note that this folder name is different from the folder created using git to download the project. For consistency with the rest of the instructions below, rename this folder to 'bots' by entering the following command into the terminal:
+  
+On Linux or MacOS:
   
   `mv "bots-main" "bots"`
+
+On Windows:
+
+  `rename "bots-main" "bots"`
 
 
 ## Compilation Instructions
@@ -56,7 +62,7 @@ cd "bots/artificial-life/"
 If you are on Windows, then run the following commands:
 
 ```
-cd "bots/artificial-life/"
+cd "bots\artificial-life"
 build.bat
 ```
 
@@ -117,4 +123,8 @@ The following is a detailed description of the meaning of each of each of the co
 * **Frames Per Second** - How fast to update the animation of the bots on screen, in terms of number of time steps per second. Note that changing this has no impact on the speed of training.
 * **Time to Refresh** - Number of seconds to display bots before updating state from the latest generation of training.
 
+## Evolving Bots
 
+Once running, you can alter parameters of the bots or environment live, and see how they adapt to the changes. For example, changing the bot's speed or turn rate, changing whether or not the walls are solid, changing the number and ratio of red to green balls, or the size of the balls can lead to drastically different optimum behaviors for the bots. If the bots appear to be stuck in one strategy for a long period of time, try to shake things up by altering the environment. Despite thier relatively tiny brains, it is is common to witness novel and unexpected behaviors exhibited by these bots.
+
+Depending on environment parameters, bots may change strategies from running in circles, spinning, darting in straight lines with tilted antennae, to hiding in corners or sitting still if the environment is particularly hostile. Bots can often find relatively good strategies within a few minutes, though longer runs, of several hours to overnight can yield highly optimized forms. Decreasing the fraction that survive each generation, or increasing the mutation rate can help to find new and more novel strategies more quickly, especially after a drastic change is made to the environment.
