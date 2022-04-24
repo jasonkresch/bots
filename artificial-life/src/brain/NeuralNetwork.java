@@ -55,7 +55,11 @@ public class NeuralNetwork {
 		for (int i = 1; i < layers.length; i++) {
 			result = matrixMultiply(layers[i], result);
 			result = matrixAdd(result, biases[i]);
-			normalizeMatrix(result);
+
+			// Don't normalize the outputs
+			if (i < (layers.length - 1)) {
+				normalizeMatrix(result);
+			}
 		}
 
 		// Convert results matrix to array
